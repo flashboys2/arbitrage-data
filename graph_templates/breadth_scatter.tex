@@ -1,0 +1,17 @@
+
+\begin{tikzpicture}
+\begin{axis}[clip mode=individual, date coordinates in=x,
+    xticklabel=\month-\year,ymode=log, x tick label style={rotate=90,anchor=east},   xlabel={Date (MM-YY)},     ylabel={%ylabel%},title={%title%},
+    log basis y={10}, ymin=0, ymax=%max%, x label style={
+    at={(0.5,-.25)}, 
+    anchor=south,
+},
+%extraaxisoptions%
+]
+\addplot[scatter,opacity=0.5] coordinates { %coords% };
+\addplot[mark=none, black, line width=3pt] coordinates { %macoords% };
+\addplot[mark=none, orange, dashed, line width=3pt] coordinates { %cumcoords% };
+\end{axis}
+%extra%
+\end{tikzpicture}
+
